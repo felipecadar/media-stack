@@ -59,15 +59,15 @@ services:
     image: lscr.io/linuxserver/qbittorrent:4.6.4
 
     # Unomment below if vpn is enabled
-    # depends_on:               # Uncomment this line if vpn is enabled
-    #   - vpn                   # Uncomment this line if vpn is enabled
+    depends_on:               # Uncomment this line if vpn is enabled
+      - vpn                   # Uncomment this line if vpn is enabled
 
     # Comment below lines if VPN is enabled
-    networks:               # Comment this line if vpn is enabled
-      - mynetwork           # Comment this line if vpn is enabled
+    # networks:               # Comment this line if vpn is enabled
+    #   - mynetwork           # Comment this line if vpn is enabled
 
     # Unomment below line if vpn is enabled
-    # network_mode: service:vpn
+    network_mode: service:vpn
 
     environment:
       - PUID=1000
